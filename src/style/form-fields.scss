@@ -4,7 +4,7 @@
 
     & > * {
         padding-left: 20px;
-    } // this line means all elements
+    }
 
     &__label {
         font-size: 14px;
@@ -27,13 +27,16 @@
         border-radius: 20px;
         background-color: #00CB79;
 
-        //margin-top: 39px;
-
         font-size: 16px;
         color: white;
 
         &:focus {
             outline: none;
         }
+    }
+
+    &__gray-button {
+        background: #999;
+        width: 137px;
     }
 }
