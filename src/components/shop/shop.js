@@ -4,21 +4,21 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
 class Shop extends Component {
-    
-    componentDidMount () {
+
+    componentDidMount() {
         const headerLinks = [
             {
-            _id: 0,
-            title: 'Login',
-            path: '/signin'
+                _id: 0,
+                title: 'Login',
+                path: '/signin'
             }
         ]
         this.props.setHeaderLinks(headerLinks);
-        // fetch shop products
+        this.props.fetchShopCategories();
         // fetch navbar links
             // set navbar links
             // filter products with links
-        
+        // fetch shop products action creator
     }
     render() {
         return (
@@ -32,7 +32,7 @@ class Shop extends Component {
 }
 
 function mapStateToProps(state) {
-    return { state }
+    return { state } 
 }
 
 Shop = connect(mapStateToProps, actions)(Shop);
